@@ -13,7 +13,7 @@ const Updatecustomer = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getcustomer/' + id)
+    axios.get('https://restaurant-website-eazx.onrender.com/getcustomer/' + id)
       .then(result => {
         setcustomerid(result.data.customerid);
         setcustomername(result.data.customername);
@@ -27,7 +27,7 @@ const Updatecustomer = () => {
 
   const update = (e) => {
     e.preventDefault();
-    axios.put("http://localhost:3001/updatecustomer/" + id, {
+    axios.put("https://restaurant-website-eazx.onrender.com/updatecustomer/" + id, {
       customerid, customername, location, email, orderditem, bill
     })
       .then(() => navigate("/customer"))

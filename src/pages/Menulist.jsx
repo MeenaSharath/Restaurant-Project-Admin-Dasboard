@@ -13,7 +13,7 @@ const Menulist = () => {
   const limit = 5;
 
   const fetchMenu = () => {
-    axios.get(`http://localhost:3001/menu`, {
+    axios.get(`https://restaurant-website-eazx.onrender.com/menu`, {
       params: {
         page: currentPage,
         limit,
@@ -32,7 +32,7 @@ const Menulist = () => {
   }, [currentPage, searchTerm]);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/deletemenu/${id}`)
+    axios.delete(`https://restaurant-website-eazx.onrender.com/deletemenu/${id}`)
       .then(() => fetchMenu())
       .catch(err => console.log(err));
   };

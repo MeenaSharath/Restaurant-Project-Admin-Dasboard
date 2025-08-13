@@ -7,7 +7,7 @@ const Enquiry = () => {
 
   const fetchMessages = async () => {
     try {
-      const res = await axios.get('http://localhost:3001/admin/contacts');
+      const res = await axios.get('https://restaurant-website-eazx.onrender.com/admin/contacts');
       setMessages(res.data);
     } catch (err) {
       console.error('Error fetching messages:', err);
@@ -21,7 +21,7 @@ const Enquiry = () => {
   const deleteMessage = async (id) => {
     if (window.confirm('Are you sure you want to delete this message?')) {
       try {
-        await axios.delete(`http://localhost:3001/admin/contacts/${id}`);
+        await axios.delete(`https://restaurant-website-eazx.onrender.com/admin/contacts/${id}`);
         setMessages((prev) => prev.filter((msg) => msg._id !== id));
       } catch (err) {
         console.error('Delete error:', err);
@@ -31,7 +31,7 @@ const Enquiry = () => {
 
   const markAsRead = async (id) => {
     try {
-      const res = await axios.patch(`http://localhost:3001/admin/contacts/${id}/read`);
+      const res = await axios.patch(`https://restaurant-website-eazx.onrender.com/admin/contacts/${id}/read`);
       setMessages((prev) =>
         prev.map((msg) => (msg._id === id ? res.data : msg))
       );

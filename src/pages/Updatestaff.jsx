@@ -13,7 +13,7 @@ const Updatestaff = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/getstaff/${id}`)
+    axios.get(`https://restaurant-website-eazx.onrender.com/getstaff/${id}`)
       .then(result => {
         const data = result.data;
         setstaffid(data.staffid);
@@ -28,7 +28,7 @@ const Updatestaff = () => {
 
   const update = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:3001/updatestaff/${id}`, {
+    axios.put(`https://restaurant-website-eazx.onrender.com/updatestaff/${id}`, {
       staffid,
       name,
       role,

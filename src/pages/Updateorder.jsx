@@ -13,7 +13,7 @@ const Updateorder = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getorder/' + id)
+    axios.get('https://restaurant-website-eazx.onrender.com/getorder/' + id)
       .then(result => {
         setproductid(result.data.productid)
         setordername(result.data.ordername)
@@ -27,7 +27,7 @@ const Updateorder = () => {
 
   const update = (e) => {
     e.preventDefault()
-    axios.put("http://localhost:3001/updateorder/" + id, {
+    axios.put("https://restaurant-website-eazx.onrender.com/updateorder/" + id, {
       productid,
       ordername,
       customername,

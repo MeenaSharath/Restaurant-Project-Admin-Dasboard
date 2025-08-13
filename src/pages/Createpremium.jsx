@@ -24,7 +24,7 @@ const Createpremium = () => {
               imageUrl = res.data.secure_url;
             }
       
-            await  axios.post('http://localhost:3001/createpremium',
+            await  axios.post('https://restaurant-website-eazx.onrender.com/createpremium',
                { productid, fooditems, price,image:imageUrl })
       
             navigate('/premium');

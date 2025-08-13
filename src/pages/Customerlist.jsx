@@ -12,7 +12,7 @@ const Customerlist = () => {
   const limit = 5;
 
   const fetchCustomers = () => {
-    axios.get('http://localhost:3001/customer', {
+    axios.get('https://restaurant-website-eazx.onrender.com/customer', {
       params: {
         page: currentPage,
         limit,
@@ -31,7 +31,7 @@ const Customerlist = () => {
   }, [searchTerm, currentPage]);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/deletecustomer/${id}`)
+    axios.delete(`https://restaurant-website-eazx.onrender.com/deletecustomer/${id}`)
       .then(() => fetchCustomers())
       .catch(err => console.log(err));
   };

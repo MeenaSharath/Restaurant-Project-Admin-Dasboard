@@ -12,7 +12,7 @@ const Staff = () => {
   const limit = 5;
 
   const fetchStaff = () => {
-    axios.get('http://localhost:3001/staff', {
+    axios.get('https://restaurant-website-eazx.onrender.com/staff', {
       params: {
         page: currentPage,
         limit,
@@ -31,7 +31,7 @@ const Staff = () => {
   }, [search, currentPage]);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/deletestaff/${id}`)
+    axios.delete(`https://restaurant-website-eazx.onrender.com/deletestaff/${id}`)
       .then(() => fetchStaff())
       .catch(err => console.log(err));
   };

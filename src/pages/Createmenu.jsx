@@ -30,7 +30,7 @@ const Createmenu = () => {
         imageUrl = res.data.secure_url;
       }
 
-      await axios.post('http://localhost:3001/createmenu', {
+      await axios.post('https://restaurant-website-eazx.onrender.com/createmenu', {
         productid,
         fooditems,
         status,

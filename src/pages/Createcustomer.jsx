@@ -14,7 +14,7 @@ const Createcustomer = () => {
   const submit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3001/createcustomer', {
+      .post('https://restaurant-website-eazx.onrender.com/createcustomer', {
         customerid,
         customername,
         location,

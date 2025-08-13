@@ -13,7 +13,7 @@ const Createstaff = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3001/createstaff', {
+    axios.post('https://restaurant-website-eazx.onrender.com/createstaff', {
       staffid,
       name,
       role,

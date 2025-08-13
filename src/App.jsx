@@ -11,7 +11,6 @@ import Menulist from './pages/Menulist';
 import Createmenu from './pages/Createmenu';
 import Updatemenu from './pages/Updatemenu';
 import Order from './pages/Order';
-// import Createorder from './pages/Createorder';
 import Updateorder from './pages/Updateorder';
 import Customerlist from './pages/Customerlist';
 import Createcustomer from './pages/Createcustomer';
@@ -43,7 +42,6 @@ function App() {
                 <Route path="/createmenu" element={< Createmenu/>} />
                 <Route path="/updatemenu/:id" element={< Updatemenu/>} />
                 <Route path="/order" element={< Order/>} />
-                {/* <Route path="/createorder" element={< Createorder/>} /> */}
                 <Route path="/updateorder/:id" element={< Updateorder/>} />
                 <Route path="/customer" element={< Customerlist/>} />
                 <Route path="/createcustomer" element={< Createcustomer/>} />

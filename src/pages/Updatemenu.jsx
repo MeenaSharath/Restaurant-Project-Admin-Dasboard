@@ -16,7 +16,7 @@ const Updatemenu = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getmenu/' + id)
+    axios.get('https://restaurant-website-eazx.onrender.com/getmenu/' + id)
       .then(result => {
         setproductid(result.data.productid);
         setfooditems(result.data.fooditems);
@@ -51,7 +51,7 @@ const Updatemenu = () => {
       }
     }
 
-    axios.put("http://localhost:3001/updatemenu/" + id,
+    axios.put("https://restaurant-website-eazx.onrender.com/updatemenu/" + id,
       { productid, fooditems, status, price, image: finalImageUrl, description, origin })
       .then(() => {
         navigate("/menu");

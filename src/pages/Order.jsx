@@ -9,7 +9,7 @@ const Order = () => {
   const limit = 5;
 
   const fetchOrders = () => {
-    axios.get('http://localhost:3001/order', {
+    axios.get('https://restaurant-website-eazx.onrender.com/order', {
       params: {
         page: currentPage,
         limit,

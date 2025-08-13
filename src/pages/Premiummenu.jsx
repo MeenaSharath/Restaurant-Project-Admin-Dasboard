@@ -12,7 +12,7 @@ const Premiummenu = () => {
   const limit = 5;
 
   const fetchMenu = () => {
-    axios.get(`http://localhost:3001/premium`, {
+    axios.get(`https://restaurant-website-eazx.onrender.com/premium`, {
       params: {
         page: currentPage,
         limit,
@@ -31,7 +31,7 @@ const Premiummenu = () => {
   }, [currentPage, searchTerm]);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/deletepremium/${id}`)
+    axios.delete(`https://restaurant-website-eazx.onrender.com/deletepremium/${id}`)
       .then(() => fetchMenu())
       .catch(err => console.log(err));
   };

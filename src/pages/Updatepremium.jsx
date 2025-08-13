@@ -12,7 +12,7 @@ const Updatepremium = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:3001/getpremium/' + id)
+    axios.get('https://restaurant-website-eazx.onrender.com/getpremium/' + id)
       .then(result => {
         setproductid(result.data.productid);
         setfooditems(result.data.fooditems);
@@ -45,7 +45,7 @@ const Updatepremium = () => {
       }
     }
 
-    axios.put("http://localhost:3001/updatepremium/" + id,
+    axios.put("https://restaurant-website-eazx.onrender.com/updatepremium/" + id,
       { productid, fooditems, price, image: finalImageUrl })
       .then(result => {
         navigate("/premium");
